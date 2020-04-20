@@ -122,11 +122,21 @@ namespace Jurassic_Park
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			for (int i = 0; i < nCars; i++)
+			if (nCars < nPeople)
 			{
-				safari[i].Abort();
-				richTextBox2.AppendText(Convert.ToString(Thread.CurrentThread.Name) + " накатались, а машины устали. Хватит.\n");
+				for (int i = 0; i < nPeople; i++)
+				{
+					museum[i].Abort();
+				}
 				richTextBox1.AppendText(Convert.ToString(Thread.CurrentThread.Name) + " накатались, а машины устали. Хватит.\n");
+			}
+			else
+			{
+				for (int i = 0; i < nCars; i++)
+				{
+					safari[i].Abort();
+				}
+				richTextBox2.AppendText(Convert.ToString(Thread.CurrentThread.Name) + " накатались, а машины устали. Хватит.\n");
 			}
 		}
 	}

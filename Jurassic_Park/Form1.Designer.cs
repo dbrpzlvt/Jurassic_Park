@@ -74,7 +74,7 @@
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(9, 107);
+			this.button1.Location = new System.Drawing.Point(21, 107);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 26);
 			this.button1.TabIndex = 5;
@@ -84,9 +84,9 @@
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(90, 107);
+			this.button2.Location = new System.Drawing.Point(132, 107);
 			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(84, 26);
+			this.button2.Size = new System.Drawing.Size(99, 26);
 			this.button2.TabIndex = 6;
 			this.button2.Text = "Прервать";
 			this.button2.UseVisualStyleBackColor = true;
@@ -94,9 +94,9 @@
 			// 
 			// richTextBox2
 			// 
-			this.richTextBox2.Location = new System.Drawing.Point(283, 12);
+			this.richTextBox2.Location = new System.Drawing.Point(271, 12);
 			this.richTextBox2.Name = "richTextBox2";
-			this.richTextBox2.Size = new System.Drawing.Size(192, 426);
+			this.richTextBox2.Size = new System.Drawing.Size(276, 426);
 			this.richTextBox2.TabIndex = 7;
 			this.richTextBox2.Text = "";
 			// 
@@ -110,16 +110,16 @@
 			this.groupBox1.Controls.Add(this.label2);
 			this.groupBox1.Location = new System.Drawing.Point(12, 12);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(265, 139);
+			this.groupBox1.Size = new System.Drawing.Size(253, 139);
 			this.groupBox1.TabIndex = 8;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Рабочая область";
 			// 
 			// richTextBox1
 			// 
-			this.richTextBox1.Location = new System.Drawing.Point(481, 12);
+			this.richTextBox1.Location = new System.Drawing.Point(553, 12);
 			this.richTextBox1.Name = "richTextBox1";
-			this.richTextBox1.Size = new System.Drawing.Size(209, 426);
+			this.richTextBox1.Size = new System.Drawing.Size(273, 426);
 			this.richTextBox1.TabIndex = 9;
 			this.richTextBox1.Text = "";
 			// 
@@ -127,12 +127,12 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(702, 450);
+			this.ClientSize = new System.Drawing.Size(838, 450);
 			this.Controls.Add(this.richTextBox1);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.richTextBox2);
 			this.Name = "Form1";
-			this.Text = "Form1";
+			this.Text = "Семафоры юрского периода";
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.ResumeLayout(false);
