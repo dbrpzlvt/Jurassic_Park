@@ -52,12 +52,11 @@ namespace Jurassic_Park
 			{
 				Thread.Sleep(1000);
 				guests.WaitOne();
-				Invoke(new AddMessageDelegate(LogAdd2), new object[] { Convert.ToString(Thread.CurrentThread.Name) + "садится в машину\n" } );
-				transport.Release();
-				Invoke(new AddMessageDelegate(LogAdd2), new object[] { Convert.ToString(Thread.CurrentThread.Name) + "катается\n" });
+				Invoke(new AddMessageDelegate(LogAdd2), new object[] { Convert.ToString(Thread.CurrentThread.Name) + "  помещает в себе человека\n" } );
+				Invoke(new AddMessageDelegate(LogAdd2), new object[] { Convert.ToString(Thread.CurrentThread.Name) + "  ездит с человеком\n" });
 				Random rand = new Random();
 				Thread.Sleep(rand.Next(1000, 5000));
-				Invoke(new AddMessageDelegate(LogAdd2), new object[] { Convert.ToString(Thread.CurrentThread.Name) + "выходит из машины\n" });
+				Invoke(new AddMessageDelegate(LogAdd2), new object[] { Convert.ToString(Thread.CurrentThread.Name) + "  отпускает человека наружу\n" });
 				guests.Release(); //машина освобождается
 				nCars--; //кол-во людей уменьшается на единицу
 				Thread.Sleep(1000); //поток засыпает на какое-то время
@@ -73,10 +72,7 @@ namespace Jurassic_Park
 				//Ладно.
 				Thread.Sleep(1000);
 				transport.WaitOne();
-
 				Invoke(new AddMessageDelegate(LogAdd), new object[] { Convert.ToString(Thread.CurrentThread.Name) + "  садится в машину\n" } );
-
-				//richTextBox2.Invoke((ThreadStart)delegate () { richTextBox2.AppendText(Convert.ToString(Thread.CurrentThread.Name) + " садится в машину\n"); });
 				Invoke(new AddMessageDelegate(LogAdd), new object[] { Convert.ToString(Thread.CurrentThread.Name) + "  катается\n" });
 				Random rand = new Random();
 				Thread.Sleep(rand.Next(1000, 5000));
@@ -103,7 +99,7 @@ namespace Jurassic_Park
 				{
 					TH = new ThreadStart(people);
 					museum[i] = new Thread(TH);
-					museum[i].Name = $"Человек {i}";
+					museum[i].Name = $"Машина {i + 1}";
 					museum[i].Start();
 				}
 			}
@@ -114,7 +110,7 @@ namespace Jurassic_Park
 				{
 					TH = new ThreadStart(cars);
 					safari[i] = new Thread(TH);
-					safari[i].Name = $"Человек {i}";
+					safari[i].Name = $"Человек {i + 1}";
 					safari[i].Start();
 				}
 			}
