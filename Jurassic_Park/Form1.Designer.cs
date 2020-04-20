@@ -36,6 +36,7 @@
 			this.button2 = new System.Windows.Forms.Button();
 			this.richTextBox2 = new System.Windows.Forms.RichTextBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -89,12 +90,13 @@
 			this.button2.TabIndex = 6;
 			this.button2.Text = "Прервать";
 			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// richTextBox2
 			// 
-			this.richTextBox2.Location = new System.Drawing.Point(307, 12);
+			this.richTextBox2.Location = new System.Drawing.Point(283, 12);
 			this.richTextBox2.Name = "richTextBox2";
-			this.richTextBox2.Size = new System.Drawing.Size(383, 426);
+			this.richTextBox2.Size = new System.Drawing.Size(192, 426);
 			this.richTextBox2.TabIndex = 7;
 			this.richTextBox2.Text = "";
 			// 
@@ -108,16 +110,25 @@
 			this.groupBox1.Controls.Add(this.label2);
 			this.groupBox1.Location = new System.Drawing.Point(12, 12);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(289, 139);
+			this.groupBox1.Size = new System.Drawing.Size(265, 139);
 			this.groupBox1.TabIndex = 8;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Рабочая область";
+			// 
+			// richTextBox1
+			// 
+			this.richTextBox1.Location = new System.Drawing.Point(481, 12);
+			this.richTextBox1.Name = "richTextBox1";
+			this.richTextBox1.Size = new System.Drawing.Size(209, 426);
+			this.richTextBox1.TabIndex = 9;
+			this.richTextBox1.Text = "";
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(702, 450);
+			this.Controls.Add(this.richTextBox1);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.richTextBox2);
 			this.Name = "Form1";
@@ -137,6 +148,7 @@
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.RichTextBox richTextBox2;
 		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.RichTextBox richTextBox1;
 	}
 }
 
